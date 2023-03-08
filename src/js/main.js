@@ -8,6 +8,7 @@ wElems = {
     wind: document.getElementById("wind"),
     hum: document.getElementById("hum"),
     rain: document.getElementById("rain"),
+    forecast: document.getElementsByClassName("forecast__card"),
 };
 const api = new WeatherApi(wElems);
 api.update();

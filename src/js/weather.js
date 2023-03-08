@@ -37,10 +37,17 @@ class WeatherApi {
                     "Rain:   " + data.current.precip_in + " %";
 
                 data.forecast.forecastday.forEach((cast, i) => {
-                    console.log(`day: ${i}`);
-                    console.log(cast.day.maxtemp_c);
-                    console.log(cast.day.mintemp_c);
-                    console.log(cast.day.condition.icon);
+                    this.elems.forecast[i].children[0].textContent =
+                        cast.day.maxtemp_c + "°C";
+                    this.elems.forecast[i].children[1].src =
+                        "https:" + cast.day.condition.icon;
+                    this.elems.forecast[i].children[2].textContent =
+                        cast.day.mintemp_c + "°C";
+                    this.elems.forecast[i].children[3].textContent = new Date(
+                        cast.date
+                    )
+                        .toDateString()
+                        .slice(0, 3);
                 });
 
                 this.loadOff();
