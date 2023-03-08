@@ -29,8 +29,10 @@ class WeatherApi {
 
                 this.elems.icon.src = "https:" + data.current.condition.icon;
                 this.elems.degrees.textContent = data.current.temp_c;
-                this.elems.wind.textContent =
-                    "Wind:   " + data.current.wind_kph + " km/h";
+                this.elems.wind.textContent = `Wind:   ${(
+                    (data.current.wind_kph * 1000) /
+                    3600
+                ).toFixed(2)} m/s`;
                 this.elems.hum.textContent =
                     "Hum:   " + data.current.humidity + " %";
                 this.elems.rain.textContent =
