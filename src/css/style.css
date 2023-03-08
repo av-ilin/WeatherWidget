@@ -88,8 +88,6 @@ body {
 
 /* #region content*/
 .weather {
-    height: 100%;
-    width: 100%;
     padding: 30px;
 }
 
@@ -146,6 +144,38 @@ body {
     border: 2px solid #ffcf7a;
     transform: rotate(90deg);
     border-radius: 10px;
+}
+
+.weather__forecast-wrap {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-slide {
+    display: block;
+    width: auto;
+}
+
+.swiper-pagination {
+    padding-top: 10px;
+    position: relative !important;
+    bottom: 0 !important;
+    top: 0 !important;
+}
+
+.forecast-card {
+    width: 130px;
+    height: 210px;
+    background-color: #ffcf7a;
 }
 /* #endregion */
 

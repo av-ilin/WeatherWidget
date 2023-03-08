@@ -25,3 +25,19 @@ setInterval(() => {
     wDate.textContent = date.getMyDate();
     wTime.textContent = date.getMyTime();
 }, 15 * 1e3);
+
+const swiper = new Swiper(".swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    centeredSlides: true,
+    roundLengths: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});

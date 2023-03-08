@@ -4,7 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>WeatherWidget</title>
+        <title>Weather Widget</title>
+
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/fonts.css" />
         <link rel="stylesheet" href="css/style.css" />
@@ -64,12 +66,41 @@
                             <p id="rain">Unknown</p>
                         </div>
                     </div>
+
+                    <div class="weather__forecast-wrap">
+                        <div class="swiper-button-prev"></div>
+                        <div class="weather__forecast swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="forecast-card"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="forecast-card"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="forecast-card"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="forecast-card"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="forecast-card"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="forecast-card"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
 
                 <div class="city" id="city_content"></div>
             </div>
         </div>
 
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/date.js"></script>
         <script src="js/weather.js"></script>
         <script src="js/main.js"></script>
