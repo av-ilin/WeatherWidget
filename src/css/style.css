@@ -1,0 +1,139 @@
+/* #region base*/
+body {
+    font-family: "Tilt Neon", sans-serif;
+    color: #ffcf7a;
+    background-size: contain;
+    background-image: url(../images/background.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* #endregion */
+
+/* #region backbone*/
+.widget-wrap {
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.widget {
+    border-radius: 5%;
+    width: 1024px;
+    height: 768px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    overflow: hidden;
+    background: linear-gradient(
+        108.15deg,
+        rgba(0, 0, 0, 0.25) 2.55%,
+        rgba(0, 0, 0, 0.25) 98.89%
+    );
+    box-shadow: 0px 4px 40px -1px rgb(0 0 0 / 30%);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+}
+
+.spinner {
+    position: absolute;
+    z-index: 50;
+    color: ffcf7a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.spinner:after {
+    animation: changeContent 0.8s linear infinite;
+    display: block;
+    content: "⠋";
+    font-size: 200px;
+}
+
+@keyframes changeContent {
+    10% {
+        content: "⠙";
+    }
+    20% {
+        content: "⠹";
+    }
+    30% {
+        content: "⠸";
+    }
+    40% {
+        content: "⠼";
+    }
+    50% {
+        content: "⠴";
+    }
+    60% {
+        content: "⠦";
+    }
+    70% {
+        content: "⠧";
+    }
+    80% {
+        content: "⠇";
+    }
+    90% {
+        content: "⠏";
+    }
+}
+/* #endregion */
+
+/* #region content*/
+.weather {
+    height: 100%;
+    width: 100%;
+}
+
+.weather__head {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.weather__val-wrap {
+    margin-left: 40px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.weather__val {
+    font-size: 164px;
+}
+
+.weather__img {
+    width: 200px;
+}
+
+.weather__celcius {
+    width: 70px;
+    fill: #ffcf7a;
+}
+
+.weather__date {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+.weather__time {
+    font-size: 40px;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+/* #endregion */
+
+/* #region city*/
+.city {
+    height: 100%;
+    width: 100%;
+    background: rgba(214, 214, 214, 0.1);
+}
+/* #endregion */
