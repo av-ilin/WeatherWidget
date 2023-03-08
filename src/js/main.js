@@ -2,11 +2,18 @@ wElems = {
     contentWeather: document.getElementById("weather_content"),
     contentCity: document.getElementById("city_content"),
     load: document.getElementById("load"),
+
     icon: document.getElementById("icon"),
     degrees: document.getElementById("degrees"),
+    wind: document.getElementById("wind"),
+    hum: document.getElementById("hum"),
+    rain: document.getElementById("rain"),
 };
 const api = new WeatherApi(wElems);
 api.update();
+setInterval(() => {
+    api.update();
+}, 5 * 60 * 1e3);
 
 const wDate = document.getElementById("date");
 const wTime = document.getElementById("time");
@@ -17,4 +24,4 @@ setInterval(() => {
     date = new Date();
     wDate.textContent = date.getMyDate();
     wTime.textContent = date.getMyTime();
-}, 15000);
+}, 15 * 1e3);

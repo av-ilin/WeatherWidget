@@ -4,7 +4,7 @@ class WeatherApi {
     }
 
     static get URL() {
-        return "http://api.weatherapi.com/v1/current.json";
+        return "http://api.weatherapi.com/v1/forecast.json";
     }
 
     constructor(elems) {
@@ -18,17 +18,32 @@ class WeatherApi {
         let url = new URL(WeatherApi.URL);
         url.searchParams.set("key", WeatherApi.KEY);
         url.searchParams.set("q", this.location);
+        url.searchParams.set("days", 7);
 
         this.loadOn();
 
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                this.elems.degrees.textContent = data.current.temp_c;
+                console.log(data);
+
                 this.elems.icon.src = "https:" + data.current.condition.icon;
+                this.elems.degrees.textContent = data.current.temp_c;
+                this.elems.wind.textContent =
+                    "Wind:   " + data.current.wind_kph + " km/h";
+                this.elems.hum.textContent =
+                    "Hum:   " + data.current.humidity + " %";
+                this.elems.rain.textContent =
+                    "Rain:   " + data.current.precip_in + " %";
+
+                data.forecast.forecastday.forEach((cast, i) => {
+                    console.log(`day: ${i}`);
+                    console.log(cast.day.maxtemp_c);
+                    console.log(cast.day.mintemp_c);
+                    console.log(cast.day.condition.icon);
+                });
 
                 this.loadOff();
-                console.log(data);
             });
     }
 

@@ -90,16 +90,15 @@ body {
 .weather {
     height: 100%;
     width: 100%;
+    padding: 30px;
 }
 
 .weather__head {
-    margin-top: 30px;
     display: flex;
     align-items: center;
 }
 
 .weather__val-wrap {
-    margin-left: 40px;
     display: flex;
     align-items: flex-start;
 }
@@ -120,13 +119,33 @@ body {
 .weather__date {
     font-size: 40px;
     margin-top: 15px;
-    margin-left: 30px;
 }
 
 .weather__time {
     font-size: 40px;
     margin-top: 5px;
-    margin-left: 30px;
+}
+
+.weather__stats {
+    white-space: pre;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather__stats-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.line {
+    width: 20px;
+    height: 0px;
+    border: 2px solid #ffcf7a;
+    transform: rotate(90deg);
+    border-radius: 10px;
 }
 /* #endregion */
 

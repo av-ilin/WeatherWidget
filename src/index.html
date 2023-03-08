@@ -22,7 +22,7 @@
                             src="images/WeatherIconSunny.svg"
                         />
                         <div class="weather__val-wrap">
-                            <h1 class="weather__val" id="degrees">26</h1>
+                            <h1 class="weather__val" id="degrees">Unknown</h1>
                             <svg
                                 class="weather__celcius"
                                 width="67"
@@ -41,8 +41,29 @@
                         </div>
                     </div>
 
-                    <p class="weather__date" id="date">1</p>
-                    <p class="weather__time" id="time">1</p>
+                    <p class="weather__date" id="date">Unknown</p>
+                    <p class="weather__time" id="time">Unknown</p>
+
+                    <div class="weather__stats">
+                        <div class="weather__stats-item">
+                            <img src="images/stats_wind.svg" />
+                            <p id="wind">Unknown</p>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="weather__stats-item">
+                            <img src="images/stats_hum.svg" />
+                            <p id="hum">Unknown</p>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="weather__stats-item">
+                            <img src="images/stats_rain.svg" />
+                            <p id="rain">Unknown</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="city" id="city_content"></div>
