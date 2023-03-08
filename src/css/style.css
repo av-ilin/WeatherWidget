@@ -163,6 +163,11 @@ body {
 .swiper-slide {
     display: block;
     width: auto;
+    opacity: 0.4;
+}
+
+.swiper-slide-active {
+    opacity: 1;
 }
 
 .swiper-pagination {
