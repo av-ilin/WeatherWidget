@@ -32,7 +32,9 @@ const swiper = new Swiper(".swiper", {
     spaceBetween: 10,
     centeredSlides: true,
     roundLengths: true,
-
+    mousewheel: {
+        invert: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
