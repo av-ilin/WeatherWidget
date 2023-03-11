@@ -154,9 +154,19 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
+    color: #ffcf7a;
     position: relative;
     margin: 0;
     padding: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ffcf7a;
+    transition: all 0.4s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    transform: scale(1.2);
 }
 
 .swiper-slide {
@@ -177,6 +187,7 @@ body {
 }
 
 .forecast__card {
+    cursor: pointer;
     padding: 15px 10px;
     width: 100px;
     height: 150px;

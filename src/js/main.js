@@ -33,6 +33,7 @@ const swiper = new Swiper(".swiper", {
     spaceBetween: 10,
     centeredSlides: true,
     roundLengths: true,
+    slideToClickedSlide: true,
     mousewheel: {
         invert: false,
     },
