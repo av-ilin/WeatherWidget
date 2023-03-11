@@ -1,6 +1,7 @@
 wElems = {
-    contentWeather: document.getElementById("weather_content"),
-    contentCity: document.getElementById("city_content"),
+    widget: document.getElementById("widget"),
+    // contentWeather: document.getElementById("weather_content"),
+    // contentCity: document.getElementById("city_content"),
     load: document.getElementById("load"),
 
     icon: document.getElementById("icon"),

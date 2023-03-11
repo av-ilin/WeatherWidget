@@ -57,14 +57,18 @@ class WeatherApi {
     }
 
     loadOn() {
-        this.elems.contentWeather.style.display = "none";
-        this.elems.contentCity.style.display = "none";
+        for (let elem of this.elems.widget.children) elem.style.opacity = "0";
+
+        // this.elems.contentWeather.style.display = "none";
+        // this.elems.contentCity.style.display = "none";
         this.elems.load.style.display = "";
     }
 
     loadOff() {
-        this.elems.contentWeather.style.display = "";
-        this.elems.contentCity.style.display = "";
+        for (let elem of this.elems.widget.children) elem.style.opacity = "1";
+
+        // this.elems.contentWeather.style.display = "";
+        // this.elems.contentCity.style.display = "";
         this.elems.load.style.display = "none";
     }
 }
