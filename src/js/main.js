@@ -11,11 +11,14 @@ wElems = {
     rain: document.getElementById("rain"),
     forecast: document.getElementsByClassName("forecast__card"),
 };
-const api = new WeatherApi(wElems);
-api.update();
+const apiWeather = new WeatherApi(wElems);
+apiWeather.update();
 setInterval(() => {
-    api.update();
+    apiWeather.update();
 }, 5 * 60 * 1e3);
+
+const apiGeo = new GeoAPI();
+apiGeo.update();
 
 const wDate = document.getElementById("date");
 const wTime = document.getElementById("time");
