@@ -1,4 +1,10 @@
 /* #region base*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Tilt Neon", sans-serif;
     color: #ffcf7a;
@@ -45,6 +51,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .spinner:after {
@@ -202,9 +209,73 @@ body {
 
 /* #region city*/
 .city {
-    height: 100%;
-    width: 100%;
+    padding: 30px 15px;
     background: rgba(214, 214, 214, 0.1);
     transition: all 0.5s ease-in-out;
 }
+
+.city__choose {
+    overflow: hidden;
+    font-size: 40px;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city__name {
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.city__name.active {
+    width: 0px;
+}
+
+.city__search-input {
+    width: 0px;
+
+    border-style: none;
+    outline: none;
+    background: transparent;
+
+    color: rgb(255, 207, 122);
+    font-family: inherit;
+    font-size: 18px;
+    letter-spacing: 2px;
+
+    transition: all 0.5s ease-in-out;
+}
+.city__search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.city__search-input:focus {
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+    border-bottom: 1px solid rgba(255, 207, 122, 0.5);
+}
+.city__search-input.active {
+    width: 100%;
+}
+
+.city__search-btn {
+    right: 0px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.city__search-btn.active {
+    width: 0;
+}
+
+.city__search-btn-icon {
+    object-fit: contain;
+    width: 100%;
+    max-width: 30px;
+}
+
 /* #endregion */

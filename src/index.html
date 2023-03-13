@@ -13,13 +13,13 @@
     </head>
     <body>
         <div class="widget-wrap">
-            <div class="spinner" id="load"></div>
+            <div class="spinner" id="load" style="opacity: 0"></div>
 
             <div class="widget" id="widget">
                 <div class="weather" id="weather_content" style="opacity: 0">
                     <div class="weather__head">
                         <div class="weather__val-wrap">
-                            <h1 class="weather__val" id="degrees">Unknown</h1>
+                            <h1 class="weather__val" id="degrees">U</h1>
                             <svg
                                 class="weather__celcius"
                                 width="67"
@@ -39,7 +39,7 @@
                         <img
                             class="weather__img"
                             id="icon"
-                            src="images/WeatherIconSunny.svg"
+                            src="https://cdn.weatherapi.com/weather/64x64/day/371.png"
                         />
                     </div>
 
@@ -211,7 +211,24 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
-                <div class="city" id="city_content" style="opacity: 0"></div>
+                <div class="city" id="city_content" style="opacity: 0">
+                    <div class="city__choose">
+                        <h1 class="city__name">Unknown</h1>
+                        <input
+                            type="text"
+                            class="city__search-input"
+                            placeholder="City..."
+                        />
+                        <button class="city__search-btn">
+                            <img
+                                class="city__search-btn-icon"
+                                src="images/icon_search.svg"
+                            />
+                        </button>
+                    </div>
+                    <div class="city__sun"></div>
+                    <div class="city__card"></div>
+                </div>
             </div>
         </div>
 

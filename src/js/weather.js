@@ -58,17 +58,11 @@ class WeatherApi {
 
     loadOn() {
         for (let elem of this.elems.widget.children) elem.style.opacity = "0";
-
-        // this.elems.contentWeather.style.display = "none";
-        // this.elems.contentCity.style.display = "none";
-        this.elems.load.style.display = "";
+        this.elems.load.style.opacity = "1";
     }
 
     loadOff() {
         for (let elem of this.elems.widget.children) elem.style.opacity = "1";
-
-        // this.elems.contentWeather.style.display = "";
-        // this.elems.contentCity.style.display = "";
-        this.elems.load.style.display = "none";
+        this.elems.load.style.opacity = "0";
     }
 }

@@ -1,7 +1,7 @@
 wElems = {
     widget: document.getElementById("widget"),
-    // contentWeather: document.getElementById("weather_content"),
-    // contentCity: document.getElementById("city_content"),
+    contentWeather: document.getElementById("weather_content"),
+    contentCity: document.getElementById("city_content"),
     load: document.getElementById("load"),
 
     icon: document.getElementById("icon"),
@@ -11,13 +11,15 @@ wElems = {
     rain: document.getElementById("rain"),
     forecast: document.getElementsByClassName("forecast__card"),
 };
+
 const apiWeather = new WeatherApi(wElems);
+const apiGeo = new GeoAPI();
+
+// apiWeather.loadOff();
 apiWeather.update();
 setInterval(() => {
     apiWeather.update();
 }, 5 * 60 * 1e3);
-
-const apiGeo = new GeoAPI();
 apiGeo.update();
 
 const wDate = document.getElementById("date");
@@ -48,4 +50,26 @@ const swiper = new Swiper(".swiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+});
+
+const search = {
+    but: document.getElementsByClassName("city__search-btn")[0],
+    name: document.getElementsByClassName("city__name")[0],
+    inp: document.getElementsByClassName("city__search-input")[0],
+};
+
+["onclick", "ontouch"].forEach((event) => {
+    search.but[event] = function () {
+        search.but.classList.add("active");
+        search.name.classList.add("active");
+        search.inp.classList.add("active");
+        search.inp.focus();
+    };
+});
+
+search.inp.addEventListener("focusout", function () {
+    search.but.classList.remove("active");
+    search.name.classList.remove("active");
+    search.inp.classList.remove("active");
+    search.inp.value = "";
 });
