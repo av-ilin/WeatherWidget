@@ -216,8 +216,6 @@ body {
 
 .city__choose {
     overflow: hidden;
-    font-size: 40px;
-
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
@@ -225,8 +223,11 @@ body {
 }
 
 .city__name {
-    overflow: hidden;
+    font-size: 25px;
     transition: all 0.5s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .city__name.active {
     width: 0px;
