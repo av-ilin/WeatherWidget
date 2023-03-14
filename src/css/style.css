@@ -278,4 +278,81 @@ body {
     max-width: 30px;
 }
 
+.city__list {
+    margin-top: 10px;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.city__list.active {
+    width: 100%;
+}
+
+.city__list-item {
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: rgb(255, 207, 122, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.city__sun {
+    padding-top: inherit;
+    display: flex;
+    justify-content: space-around;
+}
+
+.city__sun-card {
+    width: 100px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+}
+
+.city__sun-img {
+    width: 90px;
+    object-fit: contain;
+    height: 60px;
+}
+
+.city__sun-clock {
+    position: relative;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city__sun-clock_min {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+.city__sun-clock_hour {
+    /* position: absolute; */
+    width: 70%;
+    height: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cloc-line:first-child {
+    width: 50%;
+    background: transparent;
+}
+.clock-line:last-child {
+    width: 50%;
+    border: 1px solid #ffcf7a;
+    border-radius: 15px;
+}
 /* #endregion */
