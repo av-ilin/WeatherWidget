@@ -16,7 +16,7 @@ class Manager {
                 Manager.city.but.classList.add("active");
                 Manager.city.name.classList.add("active");
                 Manager.city.inp.classList.add("active");
-                Manager.city.list.classList.add("active");
+                // Manager.city.list.classList.add("active");
                 Manager.city.inp.focus();
 
                 for (let i = 0; i < Manager.city.list.children.length; i++)
@@ -36,7 +36,7 @@ class Manager {
             Manager.city.but.classList.remove("active");
             Manager.city.name.classList.remove("active");
             Manager.city.inp.classList.remove("active");
-            Manager.city.list.classList.remove("active");
+            // Manager.city.list.classList.remove("active");
             Manager.city.inp.value = "";
         });
         for (let item of Manager.city.list.children) {
