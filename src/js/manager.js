@@ -8,6 +8,9 @@ class Manager {
         }, 5 * 60 * 1e3);
 
         Manager.city.name.textContent = "Москва";
+        for (let i = 0; i < Manager.city.list.children.length; i++) {
+            Manager.city.list.children[i].textContent = GeoAPI.CITY[i].name;
+        }
         ["onclick", "ontouch"].forEach((event) => {
             Manager.city.but[event] = function () {
                 Manager.city.but.classList.add("active");
