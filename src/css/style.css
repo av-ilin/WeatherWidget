@@ -44,14 +44,15 @@ body {
 }
 
 .spinner {
-    position: absolute;
-    z-index: 50;
+    position: fixed;
+    z-index: -1;
     color: ffcf7a;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    transition: opacity 0.4s ease-in-out;
+    height: 100vh;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .spinner:after {
@@ -414,7 +415,7 @@ body {
         justify-content: space-between;
     }
     .weather__val {
-        font-size: 90px;
+        font-size: 70px;
     }
     .weather__celcius {
         width: 30px;
@@ -437,6 +438,10 @@ body {
         margin: 20px 0 30px;
     }
     .weather__stats .line {
+        display: none;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
         display: none;
     }
 }

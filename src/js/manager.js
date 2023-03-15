@@ -111,12 +111,14 @@ class Manager {
         for (let elem of Manager.weather.widget.children)
             elem.style.opacity = "0";
         Manager.weather.load.style.opacity = "1";
+        Manager.weather.load.style.zIndex = "50";
     }
 
     loadOff() {
         for (let elem of Manager.weather.widget.children)
             elem.style.opacity = "1";
         Manager.weather.load.style.opacity = "0";
+        Manager.weather.load.style.zIndex = "-1";
     }
 
     static weather = {
