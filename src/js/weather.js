@@ -4,7 +4,7 @@ class WeatherApi {
     }
 
     static get URL() {
-        return "http://api.weatherapi.com/v1/forecast.json";
+        return "https://api.weatherapi.com/v1/forecast.json";
     }
 
     static async get(location) {
